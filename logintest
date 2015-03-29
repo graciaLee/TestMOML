@@ -1,0 +1,28 @@
+  <?xml version="1.0" encoding="utf-8" ?> 
+- <!-- 	Created by http://cafe.naver.com/citrineframework
+	You can freely copy, distribute, modify for commercial or non-commercial purposes.
+
+  --> 
+- <MOML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.applusform.com/xsd/moml_ui.xsd" version="1.1.1">
+- <FUNCTION id="logoAniTo">
+  <CMD cmd="animation.show('logo', 'fade', '', 700, '')" /> 
+  <CMD cmd="animation.flyIn('logo', 0, 300, logo.width, logo.height, '', 500, '')" /> 
+  </FUNCTION>
+- <FUNCTION id="loginPopup">
+  <CMD cmd="container.open('loginPopup.xml','root.login')" /> 
+  </FUNCTION>
+- <FUNCTION id="signUpPopup">
+  <CMD cmd="container.open('signUpPopup.xml','root.signup')" /> 
+  </FUNCTION>
+  <CMD cmd="function.logoAniTo" /> 
+  <CMD cmd="userVariable.signUpPageValue = 'false'" /> 
+- <UILAYOUT portrait="720,1230" landscape="720,1230">
+- <WINDOW id="mainPage" layout="0,0,720,1230" defaultImg="#e62f17">
+  <IMAGE id="logo" layout="216,337,272,104" defaultImg="res/nux_logo_moments.png" visible="inivisible" /> 
+  <LABEL layout="0,480,720,50" text="Beautiful, private Sharing" fontSize="30" textAlign="center" textColor="#80ffffff" /> 
+  <STYLEBUTTON layout="161,804,400,90" shape="roundRect(10)" defaultImg="#ffffff" text="Sign Up" fontSize="35" textAlign="center" textColor="#e62f17" onClick="function.signUpPopup" /> 
+  <LABEL layout="0,920,720,50" text="Already have a Path account?" fontSize="30" textAlign="center" textColor="#80ffffff" /> 
+  <STYLEBUTTON layout="161,970,400,90" shape="roundRect(10)" defaultImg="#00ffffff" text="Log In" fontSize="35" textAlign="center" textColor="#80ffffff" borderStyle="solid:2|#80ffffff" onClick="function.loginPopup" /> 
+  </WINDOW>
+  </UILAYOUT>
+  </MOML>
